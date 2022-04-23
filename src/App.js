@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ArticleCard, BookCard, Footer, HeroSection, Navbar, MyFilesCard } from './components';
+import { ArticleCard, BookCard, Footer, HeroSection, Navbar } from './components';
 import { useAuth } from './context/AuthContext';
 
 
