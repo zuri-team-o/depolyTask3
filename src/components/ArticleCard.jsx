@@ -489,6 +489,13 @@ export default function ArticleCard() {
                       <Text color={"gray.500"}>
                         {"Candidate ID: " + item[0].toString()}
                       </Text>
+                      {resultOut ? (
+                        <Text color={"gray.500"}>
+                          {"Vote Counts: " + item[2].toString()}
+                        </Text>
+                      ) : (
+                        <></>
+                      )}
                     </Stack>
                     <Button
                       bg="red.700"

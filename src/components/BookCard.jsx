@@ -1248,7 +1248,7 @@ export default function BookCard() {
                   bg="orange.700"
                   color="white"
                   size="md"
-                  isDisabled={status != "Created"}
+                  isDisabled={status != "Created" && status != "Voting Ended"}
                   onClick={() => setIsOpen1(true)}
                   _hover={{
                     bg: "orange.600",
@@ -1262,8 +1262,7 @@ export default function BookCard() {
                   color="white"
                   size="md"
                   isDisabled={
-                    pcandidates.length != 0 ||
-                    (status != "Created" && status != "Voting Ended")
+                    !(status === "Created" || status === "Voting Ended")
                   }
                   onClick={() => setIsOpen2(true)}
                   _hover={{
@@ -1321,7 +1320,9 @@ export default function BookCard() {
                     bg="orange.700"
                     color="white"
                     size="md"
-                    isDisabled={status === "Created" || status === "Voting"}
+                    isDisabled={
+                      status === "Created" || status === "Voting" || resultOut
+                    }
                     onClick={RealeaseResults}
                     _hover={{
                       bg: "orange.600",
